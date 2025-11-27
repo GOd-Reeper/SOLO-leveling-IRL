@@ -1,0 +1,223 @@
+# 📄  App Specification Document: **SOlO - Leveling**
+
+---
+
+## 1. App Name  
+**SOlO - Leveling**
+
+---
+
+## 2. Theme and Style Guide
+
+🎨 **Visual Style**  
+- **Background:** Pure black (#0d0c1d) or deep dark navy.  
+- **Primary Color:** Neon blue (#3c91e6) — used for highlights, borders, important buttons.  
+- **Secondary Color:** Electric purple (#a15cff) — used for rare elements like rank-ups, titles, premium quests.  
+- **Accent:** Bright white (#f6f6f6) for text to maintain high contrast.
+- **UI Effects:**  
+  - Glassmorphism: Transparent blurred cards/panels.  
+  - Neon Glow: Soft glowing outlines around important UI elements.  
+  - Animated Highlights: XP bars, buttons glow when tapped or filled.  
+  - Subtle particle effects behind important screens (small floating particles like magical dust).
+  - Best Ui in Both android, ios Devices.
+
+🎶 **Audio SFX**  
+- **System boot up sounds** during onboarding.  
+- **Quest complete sound** when finishing a task.  
+- **Level up sound** when XP bar fills.  
+- **Chest opening sound** on daily login.
+
+🖋️ **Font Style**  
+- Futuristic Sans-Serif (example: Orbitron, Exo 2, or custom futuristic font).
+- Headings are bold neon blue.
+- Body text is bright white or light gray.
+
+🎥 **Animation Style**  
+- Typing text animation for important messages.
+- Glitch effects during transitions 
+- Smooth, powerful swipe animations between screens.
+
+---
+
+## 3. App Description  
+"Level Up: IRL" is a real-world **gamification app** inspired by Solo Leveling.  
+Users **turn everyday goals into epic quests** to level up themselves, unlock abilities, and become an S-rank version of themselves in real life.  
+The app focuses on **real-life improvement** across study, physical fitness, social skills, and self-discipline.
+
+---
+
+## 4. Core Features
+
+---
+
+### 📌 4.1 Leveling System
+- Users earn XP by completing real-world tasks ("quests").
+- Leveling up unlocks:
+  - **Titles** (like "Shadow Scholar" or "Fitness Hunter")
+  - **Badges**
+  - **Rank promotions** (E → S+)
+
+**Stats** tracked:  
+- Strength  
+- Intelligence  
+- Charisma  
+- Discipline
+
+---
+
+### 📌 4.2 Task & Quest System
+- Users can **create custom tasks** manually.
+- Tasks assigned XP manually (or auto-based on difficulty chosen).
+- Daily/Weekly quests can be generated.
+
+---
+
+### 📌 4.3 Share to Add Task Feature
+- Integrate Share Intent API.  
+- User shares a post from Instagram, YouTube, etc →  
+  - Opens "Create Task" screen inside the app.
+  - Pre-filled with shared link and editable task title.
+- Media preview saved with the task (optional thumbnail generation).
+
+---
+
+### 📌 4.4 Daily Shadow Chest
+- **Daily Login Reward:** Random coins, XP boosts, Titles.
+- Animated chest opening UI.
+- "Claim" button with particle burst effect.
+
+---
+
+### 📌 4.5 Shadow Rank System
+- Player's Rank increases based on overall level:
+  - E ➔ D ➔ C ➔ B ➔ A ➔ S ➔ S+  
+- Each rank up triggers a special cinematic popup with SFX.
+
+---
+
+### 📌 4.6 Avatar and Skin System (Phase 2)
+- Basic Avatar showing progression.
+- Future: Unlock skins, accessories (visual but no gameplay impact).
+
+---
+
+---
+
+## 5. Detailed ✨ Onboarding Flow
+
+---
+
+### Step 1: Welcome Screen  
+- Dark background.  
+- Neon system text typing effect:  
+  _"System Initializing..."_  
+  _"Welcome, New Hunter."_  
+  _"Prepare to Level Up: IRL."_
+
+Button: **Start Your Journey ➔**
+
+---
+
+### Step 2: Choose Leveling Type
+
+Question: _"Choose your Primary Path to Level Up:"_
+
+Options (Multi-Select):
+- 📚 Study & Knowledge (boost Intelligence)
+- 🏋️‍♂️ Strength & Physical Health (boost Strength)
+- 🎤 Social Confidence (boost Charisma)
+- 🧘 Self-Discipline & Habits (boost Discipline)
+
+**Selection Effects:**  
+- Icons glow when selected.
+- Short 1-second particle burst effect on confirm.
+
+Button: **Confirm Path ➔**
+
+---
+
+### Step 3: Set Starting Stats (Optional)
+- Sliders for Strength, Intelligence, Charisma, Discipline (0-10).
+- Default option: _"Start as E-Rank"_ (balanced base stats).
+
+Button: **Confirm ➔**
+
+---
+
+### Step 4: Set Daily Activity Level
+Question: _"How many quests per day do you want to complete?"_
+
+Options:
+- 💤 Casual Hunter (3–4/day)
+- 🏃 Active Hunter (5–7/day)
+- ⚡ Hardcore Hunter (10+/day)
+
+Auto adjusts daily quest suggestions.
+
+---
+
+### Step 5: Notification Permission
+- Explain it lore style:  
+  _"Allow the System to inform you of new quests, rewards, and rank-ups?"_
+
+Button: **Allow Notifications / Skip**
+
+---
+
+### Step 6: Shadow Chest Intro
+- Short animation showing the daily login chest feature.
+- Quick button: **Got it ➔**
+
+---
+
+### Step 7: Final Awakening
+- Epic cinematic screen:
+  - Big animated "Hunter Awakening" popup.  
+  - Blazing neon glow effect.
+  - Confirm sound + glitch effect.
+
+Button: **Enter the System ➔ (go to Home Screen)**
+
+---
+
+## 6. Screens List
+
+| Screen Name            | Description |
+| ----------------------- | ----------- |
+| Home                    | XP Bar, Current Level, Quick Add Quest, Shadow Chest Access |
+| Add Task                | Manual Task Add / Shared Task Add |
+| Tasks & Quests List     | Active quests, Completed Quests Archive |
+| Profile                 | Stats, Titles, Achievements, Avatar View |
+| Settings                | Theme, Notification Settings, Data Reset |
+| Onboarding (multi-step) | Setup flow on first install |
+
+---
+
+## 7. Tech Stack (Recommended)
+
+| Layer        | Technology          |
+|--------------|----------------------|
+| Frontend     | React Native (Expo) with TypeScript |
+| Animations   | React Native Reanimated + Lottie |
+| Backend      | Supabase |
+| State        | Zustand (lightweight) or Redux Toolkit |
+| Notifications| Expo Notifications |
+| Share Intent | expo-sharing or react-native-share |
+| Storage      | AsyncStorage (local saves) / Supabase sync |
+
+---
+
+## 8. Folder Structure Suggestion (Optional)
+
+---
+
+# 🔥 Summary: Your App Vibe
+
+- **Solo Leveling system reboot energy**.  
+- **Real-life task growth game**.  
+- **Smooth SFX + neon dark stylish UI**.  
+- **Add tasks by sharing cool content** instead of forgetting them.
+
+---
+
+---
